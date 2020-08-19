@@ -11,7 +11,7 @@ var retNumber = 0;
 var sizeNumber = 0;
 function upload(aliossConfig) {
     var client = new exports.alioss(aliossConfig);
-    console.log("[alioss-cli] START UPLOADING... oss://" + aliossConfig.bucket + "/" + aliossConfig.target);
+    console.log("[aliyunoss-cli] START UPLOADING... oss://" + aliossConfig.bucket + "/" + aliossConfig.target);
     var list = _list(exports.path.posix.join(process.cwd(), aliossConfig.source));
     allNumber = list.length;
     if (list.length > 0) {
@@ -26,7 +26,7 @@ function upload(aliossConfig) {
 exports.upload = upload;
 function _result() {
     if (allNumber === tmpNumber) {
-        console.log("[alioss-cli] RESULT :   " + _renderSize(sizeNumber) + " - [ SIZE ]   " + allNumber + " - [ ALL ]   " + sucNumber + " - [ SUCCESS ]   " + retNumber + " - [ RETRY ]");
+        console.log("[aliyunoss-cli] RESULT :   " + _renderSize(sizeNumber) + " - [ SIZE ]   " + allNumber + " - [ ALL ]   " + sucNumber + " - [ SUCCESS ]   " + retNumber + " - [ RETRY ]");
     }
 }
 function _upload(item, aliossConfig, client, retry) {
@@ -35,7 +35,7 @@ function _upload(item, aliossConfig, client, retry) {
         sucNumber++;
         tmpNumber++;
         sizeNumber += item.size;
-        console.log("[alioss-cli] \u3010 " + item.file + " \u3011SUCCESS   \u2714 \u3010" + _renderSize(item.size) + "\u3011");
+        console.log("[aliyunoss-cli] \u3010 " + item.file + " \u3011SUCCESS   \u2714 \u3010" + _renderSize(item.size) + "\u3011");
         _result();
     })["catch"](function () {
         if (retry) {
@@ -44,7 +44,7 @@ function _upload(item, aliossConfig, client, retry) {
         else {
             retNumber++;
             tmpNumber++;
-            console.log("[alioss-cli] \u3010 " + item.file + " \u3011FAILURE   \u2718 ");
+            console.log("[aliyunoss-cli] \u3010 " + item.file + " \u3011FAILURE   \u2718 ");
             _result();
         }
     });

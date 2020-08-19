@@ -18,12 +18,12 @@ const program = minimist(process.argv.slice(2))
 // console.log(program)
 // 查看版本
 if (program.version) {
-  console.log('1.0.0')
+  console.log('1.1.0')
   process.exit()
 }
 // 帮助
 if (program.help) {
-  console.log("Usage: alioss-cli [options]")
+  console.log("Usage: aliyunoss-cli [options]")
   console.log("--help               查看帮助")
   console.log("--version            查看版本")
   console.log("--config             配置文件路径 默认: ./alioss.config.json")

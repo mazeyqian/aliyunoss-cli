@@ -20,7 +20,7 @@ interface IOssutilConfig {
 
 export function upload (aliossConfig: IOssutilConfig) {
   const client = new alioss(aliossConfig)
-  console.log(`[alioss-cli] START UPLOADING... oss://${aliossConfig.bucket}/${aliossConfig.target}`)
+  console.log(`[aliyunoss-cli] START UPLOADING... oss://${aliossConfig.bucket}/${aliossConfig.target}`)
   const list = _list(path.posix.join(process.cwd(), aliossConfig.source))
   allNumber = list.length
   if (list.length > 0) {
@@ -34,7 +34,7 @@ export function upload (aliossConfig: IOssutilConfig) {
 
 function _result() {
   if (allNumber === tmpNumber) {
-    console.log(`[alioss-cli] RESULT :   ${_renderSize(sizeNumber)} - [ SIZE ]   ${allNumber} - [ ALL ]   ${sucNumber} - [ SUCCESS ]   ${retNumber} - [ RETRY ]`)
+    console.log(`[aliyunoss-cli] RESULT :   ${_renderSize(sizeNumber)} - [ SIZE ]   ${allNumber} - [ ALL ]   ${sucNumber} - [ SUCCESS ]   ${retNumber} - [ RETRY ]`)
   }
 }
 
@@ -43,7 +43,7 @@ function _upload(item: any, aliossConfig: IOssutilConfig, client: any, retry = t
     sucNumber++
     tmpNumber++
     sizeNumber += item.size
-    console.log(`[alioss-cli] 【 ${item.file} 】SUCCESS   ✔ 【${_renderSize(item.size)}】`)
+    console.log(`[aliyunoss-cli] 【 ${item.file} 】SUCCESS   ✔ 【${_renderSize(item.size)}】`)
     _result()
   }).catch(() => {
     if (retry) {
@@ -51,7 +51,7 @@ function _upload(item: any, aliossConfig: IOssutilConfig, client: any, retry = t
     } else {
       retNumber++
       tmpNumber++
-      console.log(`[alioss-cli] 【 ${item.file} 】FAILURE   ✘ `)
+      console.log(`[aliyunoss-cli] 【 ${item.file} 】FAILURE   ✘ `)
       _result()
     }
   })

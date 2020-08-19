@@ -1,13 +1,13 @@
-# alioss-cli
+# aliyunoss-cli
 
 阿里云 OSS 文件上传 CLI。
 
 ## Install
 
-You can get alioss-cli via [npm](http://npmjs.com).
+You can get aliyunoss-cli via [npm](http://npmjs.com).
 
 ```
-npm install alioss-cli --save-dev
+npm install aliyunoss-cli --save-dev
 ```
 
 ## Usage
@@ -41,17 +41,17 @@ npm install alioss-cli --save-dev
 
 ```
 # 测试
-npx alioss-cli --releaseEnv dev
+npx aliyunoss-cli --releaseEnv dev
 # 预发布
-npx alioss-cli --releaseEnv pre
+npx aliyunoss-cli --releaseEnv pre
 # 生产
-npx alioss-cli --releaseEnv prd
+npx aliyunoss-cli --releaseEnv prd
 ```
 
-更多命令 `npx alioss-cli --help`：
+更多命令 `npx aliyunoss-cli --help`：
 
 ```
-Usage: alioss-cli [options]
+Usage: aliyunoss-cli [options]
 --help               查看帮助
 --version            查看版本
 --config             配置文件路径 默认: ./alioss.config.json
