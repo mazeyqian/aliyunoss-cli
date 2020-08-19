@@ -1,0 +1,20 @@
+{
+  "region": "-",
+  "accessKeyId": "-",
+  "accessKeySecret": "-",
+  "bucket": "-",
+  "releaseEnvConf": {
+    "dev": {
+      "source": "dist/",
+      "target": "home/dev/"
+    },
+    "pre": {
+      "source": "dist/",
+      "target": "home/pre/"
+    },
+    "prd": {
+      "source": "dist/",
+      "target": "home/prd/"
+    }
+  }
+}
