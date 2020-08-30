@@ -1,9 +1,12 @@
 # aliyunoss-cli
-=======
+
 [![NPM version][npm-image]][npm-url]
+[![l][l-image]][l-url]
 
 [npm-image]: https://img.shields.io/npm/v/aliyunoss-cli
 [npm-url]: https://npmjs.org/package/aliyunoss-cli
+[l-image]: https://img.shields.io/npm/l/aliyunoss-cli
+[l-url]: https://github.com/mazeyqian/aliyunoss-cli
 
 阿里云 OSS 文件上传 CLI。
 
