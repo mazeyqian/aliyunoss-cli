@@ -1,4 +1,4 @@
-# aliyunoss-cli
+# Aliyunoss CLI
 
 [![NPM version][npm-image]][npm-url]
 [![l][l-image]][l-url]
