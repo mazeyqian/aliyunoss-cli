@@ -7,7 +7,6 @@
     "aliyunoss-cli": "./bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:tsc": "npx tsc src/index.ts --outDir bin",
     "release:dev": "node bin/index.js --releaseEnv dev"
   },
