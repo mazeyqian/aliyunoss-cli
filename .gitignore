@@ -22,5 +22,5 @@ doc/
 
 # cache
 .sass-cache/
-# package-lock.json
+package-lock.json
 yarn-error.log
